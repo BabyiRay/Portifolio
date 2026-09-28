@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+        :root{
+            --corPrincipal: #22D4FD;
+            --corSecundaria: #000;
+            --corTerciaria: #F6F6F6;
+            --fontePrincipal: "Montserrat", sans-serif;
+            --fonteSecundaria: "Krona One", sans-serif;
+        }
+
+        *{ margin: 0; padding: 0; }
+
+        body{
+            box-sizing: border-box;
+            background-color: var(--corSecundaria);
+            color: var(--corTerciaria);
+        }
+
+        header{
+            background-color: var(--corSecundaria);
+            padding: 2% 0% 0% 15%;
+        }
+
+        .cabecalho{ display: flex; gap: 129px; }
+
+        .cabecalho-link{
+            color: var(--corPrincipal);
+            font-family: var(--fontePrincipal);
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        main{
+            padding: 5% 15%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 82px;
+        }
+
+        .container-titulo-destaque{ color: var(--corPrincipal); }
+
+        .container-texto{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .container-texto-titulo{
+            font-family: var(--fonteSecundaria);
+            color: var(--corTerciaria);
+        }
+
+        .container-texto-paragrafo{
+            font-family: var(--fontePrincipal);
+            color: var(--corTerciaria);
+            font-size: 16px;
+            font-weight: 1;
+            text-align: justify;
+        }
+
+        .container-texto-link{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .container-texto-link-link{
+            background-color: var(--corPrincipal);
+            border: solid 1px;
+            border-radius: 16px;
+            padding: 22px 52px;
+            color: var(--corSecundaria);
+            font-size: 24px;
+            font-family: var(--fontePrincipal);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .container-foto{ width: 50%; }
+        
+        .container-foto img {
+            max-width: 100%;
+            border-radius: 20px;
+        }
+
+        footer{
+            color: var(--corSecundaria);
+            background-color: var(--corPrincipal);
+            padding: 24px;
+            text-align: center;
+            font-family: var(--fontePrincipal);
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+        
+        @media (max-width: 768px) {
+            header { padding: 5%; }
+            .cabecalho { gap: 20px; justify-content: center; }
+            main { flex-direction: column-reverse; padding: 5%; gap: 40px; text-align: center; }
+            .container-texto { width: 100%; align-items: center; }
+            .container-foto { width: 80%; }
+            .container-texto-link { flex-direction: column; gap: 15px; width: 100%; }
+            .container-texto-link-link { width: 80%; padding: 15px; }
+            .container-texto-paragrafo { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="cabecalho">
+            <a onclick="mostrarHome()" class="cabecalho-link">Home</a>
+            <a onclick="mostrarSobre()" class="cabecalho-link">Sobre mim</a>
+        </nav>
+    </header>
+
+    <!-- PÁGINA HOME -->
+    <main id="home">
+        <section class="container-texto">
+            <h1 class="container-texto-titulo">Eleve seu negócio digital a outro nível <strong class="container-titulo-destaque"> com um Front-end de qualidade!</strong></h1>
+            <p class="container-texto-paragrafo">Olá! Sou Ray Beck, desenvolvedora Front-end com especialidade em React, HTML e CSS. Ajudo pequenos negócios e designers a colocarem em prática boas ideias. Vamos conversar?</p>
+            <div class="container-texto-link">
+    <a href="https://www.linkedin.com/in/josé-beck-3bb60b40a" target="_blank" class="container-texto-link-link">Linkedin</a>
+    <a href="https://github.com/BabyiRay" target="_blank" class="container-texto-link-link">Github</a>
+</div>
+        </section>
+        <section class="container-foto">
+            <!-- Link da foto do seu Drive adaptado para visualização -->
+            <img src="WhatsApp Image 2026-09-24 at 19.44.09.jpeg" alt="Foto de Perfil">
+        </section>
+    </main>
+
+    <!-- PÁGINA SOBRE MIM -->
+    <main id="sobre" style="display: none;">
+        <section class="container-texto">
+            <h1 class="container-texto-titulo">Sobre mim</h1>
+            <p class="container-texto-paragrafo">Sou um profissional apaixonado por tecnologia, cursando o curso técnico de Desenvolvimento de Sistemas.</p>
+            <p class="container-texto-paragrafo">O cuidado em identificar pontos críticos no acompanhamento das preferências de consumo acarreta um processo de reformulação e modernização das direções preferenciais no sentido do progresso.</p>
+           <div class="container-texto-link">
+    <a href="https://www.linkedin.com/in/josé-beck-3bb60b40a" target="_blank" class="container-texto-link-link">Linkedin</a>
+    <a href="https://github.com/BabyiRay" target="_blank" class="container-texto-link-link">Github</a>
+</div>
+        </section>
+        <section class="container-foto">
+            <img src="WhatsApp Image 2026-09-24 at 20.05.09.jpeg" alt="Foto de Perfil">
+        </section>
+    </main>
+
+    <footer>
+         <p>Desenvolvido por Beck</p>
+    </footer>
+
+    <!-- Script para alternar entre as páginas na mesma tela -->
+    <script>
+        function mostrarHome() {
+            document.getElementById('home').style.display = 'flex';
+            document.getElementById('sobre').style.display = 'none';
+        }
+        function mostrarSobre() {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('sobre').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
